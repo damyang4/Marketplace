@@ -7,7 +7,7 @@ Note: A demo video will be available soon
 
 | Landing Page | Product Catalog | Product Details |
 | :---: | :---: | :---: |
-| <img width="1905" height="868" alt="main_page" src="https://github.com/user-attachments/assets/426b6886-1e43-405d-9455-4ab64fa523b7" /> | <img width="1919" height="814" alt="product_catalog" src="https://github.com/user-attachments/assets/b0e55655-ebc0-49ca-b0f0-4a6039d771d2" /> | <img width="1919" height="846" alt="product_details" src="https://github.com/user-attachments/assets/0b63232c-09e0-4aa9-bd82-84bdbb0d2f99" /> |
+| <img width="1901" height="820" alt="landing_page" src="https://github.com/user-attachments/assets/74a4fdc5-dc85-4dc7-ab9b-692ff06d09f0" /> | <img width="1919" height="811" alt="product_catalog" src="https://github.com/user-attachments/assets/e0739165-0888-4c9e-ad20-dffa30101b2c" /> | <img width="1919" height="846" alt="product_details" src="https://github.com/user-attachments/assets/0b63232c-09e0-4aa9-bd82-84bdbb0d2f99" /> |
 | *Welcome landing page and core discovery layout* | *Filterable storefront hub for local artisanal goods* | *Dedicated product descriptions, parameter adjustments, and cart injection* |
 
 | Navbar Mini-Cart | Full Shopping Cart | Login Page |
