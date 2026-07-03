@@ -38,6 +38,8 @@ Note: A demo video will be available soon
 
 * **Product Details Page**: He created the dedicated description page that opens when you click on a product. This page displays the item's details and lets users adjust quantities right before adding them to the cart.
 
+* **Product Images & Cloud Storage**: He set up the entire cloud image workflow. He connected the backend to Cloudflare R2 storage, built the endpoint to accept multiple file uploads at once, and wrote the logic to assign unique filenames, stream images safely to the cloud, and link them to products in the database.
+
 ## 🛠️ Tech Stack
 ### Backend
 - Java 23
