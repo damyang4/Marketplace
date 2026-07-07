@@ -10,10 +10,15 @@ Note: A demo video will be available soon
 | <img width="1901" height="820" alt="landing_page" src="https://github.com/user-attachments/assets/74a4fdc5-dc85-4dc7-ab9b-692ff06d09f0" /> | <img width="1919" height="811" alt="product_catalog" src="https://github.com/user-attachments/assets/e0739165-0888-4c9e-ad20-dffa30101b2c" /> | <img width="1919" height="846" alt="product_details" src="https://github.com/user-attachments/assets/0b63232c-09e0-4aa9-bd82-84bdbb0d2f99" /> |
 | *Welcome landing page and core discovery layout* | *Filterable storefront hub for local artisanal goods* | *Dedicated product descriptions, parameter adjustments, and cart injection* |
 
-| Navbar Mini-Cart | Full Shopping Cart | Login Page |
-| :---: | :---: | :---: |
-| <img width="1919" height="873" alt="mini_cart" src="https://github.com/user-attachments/assets/f32e056a-87aa-4459-a598-bfe5e4968bb9" /> | <img width="1919" height="555" alt="shopping_cart" src="https://github.com/user-attachments/assets/b03f2bbd-4965-4158-8073-ca309b32f0d3" /> | <img width="1901" height="863" alt="login" src="https://github.com/user-attachments/assets/fde0777c-dbc5-45cf-bf47-493e5bb1669e" /> |
-| *Live item tracking from the global navigation bar* | *Comprehensive shopping cart dashboard with session token state tracking* | *Secure portal handling user login, logout, and token provisioning* |
+| Navbar Mini-Cart | Full Shopping Cart |
+| :---: | :---: |
+| <img width="1919" height="873" alt="mini_cart" src="https://github.com/user-attachments/assets/f32e056a-87aa-4459-a598-bfe5e4968bb9" /> | <img width="1919" height="555" alt="shopping_cart" src="https://github.com/user-attachments/assets/b03f2bbd-4965-4158-8073-ca309b32f0d3" /> |
+| *Live item tracking from the global navigation bar* | *Comprehensive shopping cart dashboard with session token state tracking* |
+
+| Login Page | Register Page |
+| :---: | :---: |
+| <img width="1900" height="869" alt="login" src="https://github.com/user-attachments/assets/7cde23da-0f3c-4a70-b213-7c9fa811cd4e" /> | <img width="1902" height="874" alt="register" src="https://github.com/user-attachments/assets/1ae73a12-8a2b-4523-b75b-f946b987c785" /> |
+| *Login: The secure gateway for returning users to log into the shop.* | *Registration: A clean signup portal for creating a new profile with built-in validation.* |
 
 | Add Product Dashboard | Stripe Payment Form | Order Success Receipt |
 | :---: | :---: | :---: |
