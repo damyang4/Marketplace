@@ -33,12 +33,12 @@
       <a [routerLink]="['/products']"
         class="hover:bg-[#333] transition-colors gap-3 flex items-center font-medium bg-black text-white rounded-full px-6 py-3"
       >
-        Shop Orgnaic Food
+        Shop Organic Food
         <span class="flex items-center justify-center bg-white rounded-full size-7">
           <img class="size-5" src="assets/icons/chevron-right.svg" alt="chevron right" />
         </span>
       </a>
-      <button class="underline font-medium">Become a seller</button>
+      <button class="underline font-medium" [routerLink]="'/add-product'">Become a seller</button>
     </div>
   </div>
   <div class="relative h-100 w-[50%]">

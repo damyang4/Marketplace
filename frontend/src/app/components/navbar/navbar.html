@@ -48,10 +48,18 @@
           Sign Out
         </button>
         } @else {
-        <a [routerLink]="['/login']" (click)="toggleUserMenu()" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors font-medium">
+        <a
+          [routerLink]="['/login']"
+          [queryParams]="{ tab: 'login' }"
+          (click)="toggleUserMenu()"
+          class="block px-4 py-2 text-gray-700 hover:bg-gray-50 transition-colors font-medium">
           Sign In
         </a>
-        <a [routerLink]="['/register']" (click)="toggleUserMenu()" class="block px-4 py-2 text-gray-600 hover:bg-gray-50 transition-colors">
+        <a
+          [routerLink]="['/login']"
+          [queryParams]="{ tab: 'register' }"
+          (click)="toggleUserMenu()"
+          class="block px-4 py-2 text-gray-600 hover:bg-gray-50 transition-colors">
           Create Account
         </a>
         }

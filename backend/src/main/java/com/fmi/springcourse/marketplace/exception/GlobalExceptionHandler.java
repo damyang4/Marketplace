@@ -67,7 +67,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(BadCredentialsException.class)
 	public ResponseEntity<ExceptionResponse> handleBadCredentialsException(BadCredentialsException ex) {
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
-				.body(new ExceptionResponse("Invalid credentials"));
+				.body(new ExceptionResponse("Invalid email or password")); // invalid credentials
 	}
 	
 	@ExceptionHandler(AccessDeniedException.class)

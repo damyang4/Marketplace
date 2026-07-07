@@ -4,6 +4,7 @@ import com.fmi.springcourse.marketplace.auth.dto.AuthResponse;
 import com.fmi.springcourse.marketplace.auth.dto.LoginRequest;
 import com.fmi.springcourse.marketplace.auth.dto.RegistrationRequest;
 import com.fmi.springcourse.marketplace.exception.UserAlreadyExistsException;
+import com.fmi.springcourse.marketplace.exception.UserNotFoundException;
 import com.fmi.springcourse.marketplace.user.UserRepository;
 import com.fmi.springcourse.marketplace.user.entity.User;
 import com.fmi.springcourse.marketplace.user.entity.UserRole;
@@ -37,18 +38,18 @@ public class AuthService {
     @Transactional
     public AuthResponse register(RegistrationRequest request) {
         if (repo.existsByEmail(request.email())) {
-            throw new UserAlreadyExistsException("User with this email already exists");
+            throw new UserAlreadyExistsException("User with this email already exists.");
         }
 
         if (repo.existsByProfileName(request.profileName())) {
-            throw new UserAlreadyExistsException("Profile name is taken. Please try another one");
+            throw new UserAlreadyExistsException("User with this username already exists.");
         }
 
         User user = mapToUser(request);
         repo.save(user);
 
         String jwt = jwtService.generateToken(user.getUsername());
-        return new AuthResponse(jwt);
+        return new AuthResponse(jwt, user.getProfileName());
     }
 
     public AuthResponse login(LoginRequest request) {
@@ -60,6 +61,9 @@ public class AuthService {
         );
 
         String jwt = jwtService.generateToken(request.email());
-        return new AuthResponse(jwt);
+
+        User user = repo.findByEmail(request.email())
+                .orElseThrow(() -> new UserNotFoundException("User with email " + request.email() + " was not found."));
+        return new AuthResponse(jwt, user.getProfileName());
     }
 }

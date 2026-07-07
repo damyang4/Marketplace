@@ -7,6 +7,7 @@ import { Login } from './pages/login/login';
 import { OrderSuccess } from './pages/order-success/order-success';
 import { CategoriesPage } from './pages/categories/categories';
 import { AddProduct } from './pages/add-product/add-product';
+import { Register } from './pages/register/register';
 
 export const routes: Routes = [
   {
@@ -36,6 +37,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login
+  },
+  {
+    path: 'register',
+    component: Register
   },
   {
     path: 'order-success',

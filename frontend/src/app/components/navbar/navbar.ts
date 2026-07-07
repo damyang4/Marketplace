@@ -66,5 +66,6 @@ export class Navbar implements OnInit {
 
     this.isUserMenuOpen.set(false);
     this.router.navigate(['/']);
+    this.toastr.success('User signed out!')
   }
 }

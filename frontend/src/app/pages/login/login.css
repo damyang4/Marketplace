@@ -110,3 +110,94 @@
   border: 1px solid #2d79f3;
   ;
 }
+
+
+/* Login switch logic */
+.switch {
+  /* --- PALETTE CONFIGURATION --- */
+  --_switch-bg-clr: #f2f2f2;       /* Dark slate gray for outer capsule background */
+  --_switch-padding: 4px;          /* Clean gutter padding around the sliding pill */
+  --_slider-bg-clr: black;       /* Pure white active slider pill */
+  --_txt-inactive-clr: gray;    /* Muted slate gray text for unselected tabs */
+  --_txt-active-clr: white;      /* Deep dark navy text for high visibility over white */
+
+  --_label-padding: 0.75rem 2rem;
+  --_switch-easing: cubic-bezier(0.47, 1.64, 0.41, 0.8); /* Bouncy physics animation */
+
+  width: fit-content;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  isolation: isolate;
+  user-select: none;
+}
+
+/* Accessible screen-reader stealth rule */
+.switch input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Style configuration for the label text blocks */
+.switch > span {
+  display: grid;
+  place-content: center;
+  padding: var(--_label-padding);
+  font-size: 1.125rem;
+  font-weight: 600;
+  z-index: 1;
+  transition: color 250ms ease-in-out;
+}
+
+.switch::before,
+.switch::after {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+
+/* Sliding pill element */
+.switch::before {
+  background-color: var(--_slider-bg-clr);
+  inset: var(--_switch-padding) 50% var(--_switch-padding) var(--_switch-padding);
+  transition: inset 400ms var(--_switch-easing);
+  z-index: -1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Background pill wrapper */
+.switch::after {
+  background-color: var(--_switch-bg-clr);
+  inset: 0;
+  z-index: -2;
+}
+
+/* Elastic stretch effect when hovering unselected items */
+.switch:has(input:checked):hover::before {
+  inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 45%;
+}
+.switch:has(input:not(:checked)):hover::before {
+  inset: var(--_switch-padding) 45% var(--_switch-padding) var(--_switch-padding);
+}
+
+/* --- STATE CHANGE ACTIONS (CHECKED / UNCHECKED) --- */
+
+/* State A: Unchecked (Login is Active) */
+.switch:has(input:not(:checked)) > span:first-of-type { color: var(--_txt-active-clr); }
+.switch:has(input:not(:checked)) > span:last-of-type  { color: var(--_txt-inactive-clr); }
+
+/* State B: Checked (Register is Active) */
+.switch:has(input:checked)::before {
+  inset: var(--_switch-padding) var(--_switch-padding) var(--_switch-padding) 50%;
+}
+.switch:has(input:checked) > span:first-of-type { color: var(--_txt-inactive-clr); }
+.switch:has(input:checked) > span:last-of-type  { color: var(--_txt-active-clr); }

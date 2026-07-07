@@ -10,7 +10,7 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
     catchError((error: HttpErrorResponse) => {
       if (error.status === 401) {
         // 1. Define URLs that are allowed to fail with a 401 without forcing a login redirect
-        const bypassedUrls = ['/cart', '/products' ];
+        const bypassedUrls = ['/cart', '/products', '/register' ];
 
         // 2. Check if the current request URL matches any bypassed URLs
         const isBypassed = bypassedUrls.some(url => req.url.includes(url));

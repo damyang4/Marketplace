@@ -16,6 +16,11 @@ export const appConfig: ApplicationConfig = {
       withInterceptors([authInterceptor, errorInterceptor])  // errorInterceptor
     ),
 		provideAnimations(),
-		provideToastr()
+		provideToastr({
+      timeOut: 3000,
+      closeButton: true,
+      positionClass: 'toast-bottom-right'
+
+    })
   ]
 };

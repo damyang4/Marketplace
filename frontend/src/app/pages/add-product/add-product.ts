@@ -37,7 +37,7 @@ export class AddProduct implements OnInit {
 
   readonly productForm = form(this.productModel);
 
-  token = signal<string | null>(localStorage.getItem('auth-token'));
+  token = signal<string | null>(localStorage.getItem('auth_token'));
 
   ngOnInit() {
     this.productService.listCategories().subscribe({
@@ -86,7 +86,7 @@ export class AddProduct implements OnInit {
         this.toastr.error('Please add a valid category');
         return;
       }
-			
+
 			if (!value.mainImage.name) {
         this.toastr.error('Please add a valid main image');
         return;
